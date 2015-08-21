@@ -23,7 +23,7 @@ define(function (require) {
 		});
 	});
 
-	$(document).on("click", "#zipSearch", function() {
+	$(document).on("click", "#selectThree", function() {
 		console.log("clicked 3 day");
 		getData(function (data) {
 			weatherObj3 = {
