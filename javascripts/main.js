@@ -18,10 +18,37 @@ requirejs.config({
 });
 
 requirejs(
-["core-dependcies", "jquery"], 
-function(coreDependencies, $) {
+["core-dependencies", "auth"], 
+function (coreDependencies, auth) {
 
+    var ref = new Firebase("https://nss-weather-app.firebaseio.com");
+    var authData = ref.getAuth();
+    console.log("authentication data", authData);
 
+    if (authData === null) {
+      ref.authWithOAuthPopup("github", function(error, authData) {
+        if (error) {
+          console.log("Login Failed!", error);
+        } else {
+          console.log("Authenticated successfully with payload:", authData);
+          auth.setuid(authData.uid);
+          require(
+            ["core-logic"], 
+            function (mainjs) {
+              mainjs.mainjs()  //MAKE SURE YOU CHANGE THIS CALL TO CALL CORE-DEPENDENCIES AND TOM'S KEY THAT CONTAINS THE CODE
+              console.log("successfull");
+            });
+        }
+      })
+    } else {
+      auth.setuid(authData.uid);
+      require(
+        ["core-logic"],
+        function (mainjs) {
+          mainjs.mainjs(); //MAKE SURE YOU CHANGE THIS CALL TO CALL CORE-DEPENDENCIES AND TOM'S KEY THAT CONTAINS THE CODE
+          console.log("else is logging correctly")
+        })
+    };
 
 
 });
