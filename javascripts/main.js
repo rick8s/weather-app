@@ -26,7 +26,8 @@ function (coreDependencies, auth) {
     console.log("authentication data", authData);
 
     if (authData === null) {
-      ref.authWithOAuthPopup("github", function(error, authData) {
+      ref.authWithOAuthPopup("twitter", function(error, authData) {
+        remember: "sessionOnly"
         if (error) {
           console.log("Login Failed!", error);
         } else {
