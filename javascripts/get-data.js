@@ -13,7 +13,7 @@ define(function(require)
     var count = "1";      
 
       $.ajax({
-        url:"http://api.openweathermap.org/data/2.5/forecast/daily?zip=" + wxzip + ",us&cnt=" + count + "&mode=json",
+        url:"http://api.openweathermap.org/data/2.5/forecast/daily?zip=" + wxzip + ",us&cnt=" + count + "&mode=json&units=imperial",
         method: "GET"
       }).done(function(data){
         data.saved = false;

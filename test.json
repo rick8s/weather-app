@@ -1,0 +1,7 @@
+
+
+
+
+
+
+{"city":{"id":4951591,"name":"Southborough","coord":{"lon":-71.524513,"lat":42.305649},"country":"US","population":0},"cod":"200","message":0.01,"cnt":3,"list":[{"dt":1440172800,"temp":{"day":300.46,"min":299.94,"max":302.82,"night":299.94,"eve":302.82,"morn":300.46},"pressure":1011.37,"humidity":100,"weather":[{"id":502,"main":"Rain","description":"heavy intensity rain","icon":"10d"}],"speed":1.53,"deg":222,"clouds":92,"rain":19.82},{"dt":1440259200,"temp":{"day":299.62,"min":296.64,"max":302.18,"night":296.86,"eve":302,"morn":296.87},"pressure":1013.22,"humidity":74,"weather":[{"id":500,"main":"Rain","description":"light rain","icon":"10d"}],"speed":1.91,"deg":6,"clouds":68,"rain":0.39},{"dt":1440345600,"temp":{"day":295.18,"min":292.44,"max":296.66,"night":292.44,"eve":295.11,"morn":294.67},"pressure":1010.34,"humidity":98,"weather":[{"id":501,"main":"Rain","description":"moderate rain","icon":"10d"}],"speed":1.97,"deg":31,"clouds":88,"rain":6.71}]}
