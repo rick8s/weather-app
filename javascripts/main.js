@@ -35,8 +35,8 @@ function (coreDependencies, auth) {
           auth.setuid(authData.uid);
           require(
             ["core-logic"], 
-            function (mainjs) {
-              mainjs.mainjs()  //MAKE SURE YOU CHANGE THIS CALL TO CALL CORE-DEPENDENCIES AND TOM'S KEY THAT CONTAINS THE CODE
+            function (coreLogic) {
+              coreLogic()  //MAKE SURE YOU CHANGE THIS CALL TO CALL CORE-DEPENDENCIES AND TOM'S KEY THAT CONTAINS THE CODE
               console.log("successfull");
             });
         }
@@ -45,11 +45,9 @@ function (coreDependencies, auth) {
       auth.setuid(authData.uid);
       require(
         ["core-logic"],
-        function (mainjs) {
-          mainjs.mainjs(); //MAKE SURE YOU CHANGE THIS CALL TO CALL CORE-DEPENDENCIES AND TOM'S KEY THAT CONTAINS THE CODE
+        function (coreLogic) {
+          coreLogic() //MAKE SURE YOU CHANGE THIS CALL TO CALL CORE-DEPENDENCIES AND TOM'S KEY THAT CONTAINS THE CODE
           console.log("else is logging correctly")
         })
     };
-
-
 });
