@@ -4,7 +4,7 @@ define(function (require) {
 
         var bootstrap = require("bootstrap"),
             firebase = require("firebase"),
-            hbs = require("require-handlebars-plugin");
+            hbs = require("hbs");
 
     };
 });
