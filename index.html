@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+    <!-- always place the bootstrap stylesheet link BEFORE my stylesheet as shown below-->
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Weather</title>
+    <meta charset="utf-8">
+   
+  </head>
+
+  <body> 
+    <div class="container-fluid">
+    <!--  this is the navigation bar -->
+    <div class="row">
+      <div class="col-md-12">
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#">Weather App</a></li>
+        </ul>
+      </div>
+      <div class="form-group">
+        <form class="navbar-form" role="search">    
+          <label for="zip">Zip Code 5 digit</label>
+          <input id="zipInput" type="text" pattern="[0-9]*" maxlength="5" min="0" name="zip" id="zip">
+          <button id="zipSearch" type="submit" class="btn btn-default">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="row">
+      <div id="currentWeather" class="col-md-12">
+
+
+        
+      </div>
+    </div>
+
+    <div class="row">
+      <div id="forecastThree" class="col-md-12">
+
+        
+      </div>
+    </div>
+   
+   <div class="row">
+      <div id="forecastSeven"class="col-md-12">
+
+        
+      </div>
+    </div>
+    <script data-main="javascripts/main" src="bower_components/requirejs/require.js"></script> 
+  </body>
+</html>
