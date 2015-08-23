@@ -18,8 +18,8 @@ requirejs.config({
 });
 
 requirejs(
-["core-dependencies", "auth"], 
-function (coreDependencies, auth) {
+["core-dependencies", "core-logic", "auth"], 
+function (coreDependencies, coreLogic, auth) {
 
     var ref = new Firebase("https://nss-weather-app.firebaseio.com");
     var authData = ref.getAuth();
@@ -27,7 +27,7 @@ function (coreDependencies, auth) {
 
     if (authData === null) {
       ref.authWithOAuthPopup("twitter", function(error, authData) {
-        remember: "sessionOnly"
+        // remember: "sessionOnly";
         if (error) {
           console.log("Login Failed!", error);
         } else {
@@ -36,18 +36,25 @@ function (coreDependencies, auth) {
           require(
             ["core-logic"], 
             function (coreLogic) {
-              coreLogic()  //MAKE SURE YOU CHANGE THIS CALL TO CALL CORE-DEPENDENCIES AND TOM'S KEY THAT CONTAINS THE CODE
+              coreLogic();  //MAKE SURE YOU CHANGE THIS CALL TO CALL CORE-DEPENDENCIES AND TOM'S KEY THAT CONTAINS THE CODE
               console.log("successfull");
             });
         }
-      })
+      });
     } else {
       auth.setuid(authData.uid);
       require(
         ["core-logic"],
         function (coreLogic) {
-          coreLogic() //MAKE SURE YOU CHANGE THIS CALL TO CALL CORE-DEPENDENCIES AND TOM'S KEY THAT CONTAINS THE CODE
-          console.log("else is logging correctly")
-        })
-    };
+          coreLogic(); //MAKE SURE YOU CHANGE THIS CALL TO CALL CORE-DEPENDENCIES AND TOM'S KEY THAT CONTAINS THE CODE
+          console.log("else is logging correctly");
+        });
+    }
+
+
+
+
 });
+
+
+
