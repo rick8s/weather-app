@@ -7,7 +7,8 @@ requirejs.config({
     'bootstrap': '../lib/bower_components/bootstrap/dist/js/bootstrap.min',
     'lodash': '../lib/bower_components/lodash/lodash.min',
     'jquery-ui': '../lib/bower_components/jquery-ui/jquery-ui.min',
-    'q': '../lib/bower_components/q/q'
+    'q': '../lib/bower_components/q/q',
+    'datejs': '../lib/bower_components/datejs/build/production/date.min'
   },
   shim: {
     'bootstrap': ['jquery'],

@@ -3,6 +3,7 @@
 define(function (require) {
      var $ = require("jquery");
      var q = require("q");
+     var datejs = require("datejs");
       
     return function (wxzip, dayCount) {
     
@@ -25,10 +26,11 @@ define(function (require) {
           };
 
         if (dayCount >= "3") {
-
+          
           // Add day 2 and 3 to weather obj
 
           for (var i = 1; i <= 2; i++) {
+
             weatherObj.additionalDays.push({
             
               high: data.list[i].temp.max,
@@ -36,7 +38,8 @@ define(function (require) {
               wind: data.list[i].speed,
               description: data.list[i].weather[0].description,
               pressure: data.list[i].pressure,
-              date: data.list[i].dt
+              date: Date.today().add(i).days().toString("MMM d")
+
 
             });
           }
@@ -54,7 +57,7 @@ define(function (require) {
               wind: data.list[i].speed,
               description: data.list[i].weather[0].description,
               pressure: data.list[i].pressure,
-              date: data.list[i].dt
+              date: Date.today().add(i).days().toString("MMM d")
 
             });
           }

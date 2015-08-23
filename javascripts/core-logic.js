@@ -51,6 +51,7 @@ define(function (require) {
 
 				console.log(weatherObj);
 				var populateAdditionalDays = templates.additionalDaysTemplate(weatherObj.additionalDays);
+				$('#forecastThree').hide();
 				$('#forecastSeven').html(populateAdditionalDays);
 			})
 			.fail(function (error) {
