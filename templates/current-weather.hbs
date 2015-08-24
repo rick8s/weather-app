@@ -1,14 +1,19 @@
-
-<div class="forecast">
-  <label><h1>Current Weather</h1></label>
-  <div>City: {{city}}</div>
-  <div>Current Temp: {{currentTemp}}</div>
-  <div>Wind Speed: {{wind}}</div>
-  <div>Conditions: {{conditions}}</div>
-  <div>Air Pressure: {{air_Pressure}}</div>
-  <div>
-    <button id='selectThree' class='forecast'>Three Day Forecast</button> 
-    <button id='selectSeven' class='forecast'>Seven Day Forecast</button> 
-  </div>
-</div>
-
+<ul class="thumbnails">
+  <li class="span4">
+    <div class="thumbnail">
+      <div class="forecast">
+        <div class="header">
+          <label><h1>Current Weather</h1></label>
+        </div>
+        <div><em>City:</em> {{city}}</div>
+        <div><em>Current Temp:</em> {{currentTemp}}</div>
+        <div><em>Wind Speed:</em> {{wind}}</div>
+        <div><em>Conditions:</em> {{conditions}}</div>
+        <div><em>Air Pressure:</em> {{air_Pressure}}</div>
+        <div>
+          <button id='selectThree' class='forecast'>Three Day Forecast</button> 
+          <button id='selectSeven' class='forecast'>Seven Day Forecast</button> 
+        </div>
+      </div>
+    </li>
+  </ul>
