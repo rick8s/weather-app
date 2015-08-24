@@ -6,9 +6,12 @@
    <div class="thumbnail">
      <div class="forecast">
             <div class="additionalDays">
-                <div class="header">
-                  <label><h1>Weather For {{date}}</h1></label>
-                </div>
+              <div class="header">
+                <label><h1>Weather For {{date}}</h1></label>
+              </div>
+              <div>
+                <img src="{{icon}}">
+              </div>
               <div><em>High:</em> {{high}}</div>
               <div><em>Low:</em> {{low}}</div>
               <div><em>Wind Speed:</em> {{wind}}</div>
@@ -16,7 +19,7 @@
               <div><em>Air Pressure:</em> {{pressure}}</div>
             </div>
             <div>
-              <button class='save'>Save</button> 
+              <button class='save btn btn-default'>Save</button> 
             </div>
         </div>
     </div>

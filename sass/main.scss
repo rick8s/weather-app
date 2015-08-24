@@ -8,17 +8,19 @@ body {
 
  }
 
+ .container {
+    width: 70%;
+    padding: 50px;
+ }
+
  ul {
     list-style-type: none;
 }
 
-h1 {
-    margin-left: 150px;
+.row {
+    font-family: 'Oswald';
 }
 
-form.navbar-form {
-    margin-left: 175px;
-}
 
 .thumbnail, .additional-days {
     box-shadow: 2px 2px 2px grey;
@@ -30,4 +32,8 @@ form.navbar-form {
  border-color: transparent;
  font-family: Zapf Chancery, cursive;
  font-size: 2.0em;
- }
+}
+
+.forecast {
+    padding: 25px;
+}

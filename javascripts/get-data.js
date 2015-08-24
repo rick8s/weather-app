@@ -14,7 +14,7 @@ define(function (require) {
         url:"http://api.openweathermap.org/data/2.5/forecast/daily?zip=" + wxzip + ",us&cnt=" + dayCount + "&mode=json&units=imperial"
       })
       .done(function(data){
-        // console.log(data);
+        console.log(data);
           // Build custom weather object from data. These keys match HBS template current-weather
           var weatherObj = {
             city: data.city.name,
@@ -22,6 +22,7 @@ define(function (require) {
             wind: data.list[0].speed,
             conditions: data.list[0].weather[0].description,
             pressure: data.list[0].pressure,
+            icon: 'http://openweathermap.org/img/w/' + data.list[0].weather[0].icon + '.png',
             // This is the jam right here: set up array to store additional days of weather if necessary
             additionalDays: []
           };
@@ -38,7 +39,8 @@ define(function (require) {
               wind: data.list[i].speed,
               description: data.list[i].weather[0].description,
               pressure: data.list[i].pressure,
-              date: Date.today().add(i).days().toString("MMM d")
+              date: Date.today().add(i).days().toString("MMM d"),
+              icon: 'http://openweathermap.org/img/w/' + data.list[i].weather[0].icon + '.png'
 
 
             });
@@ -59,7 +61,8 @@ define(function (require) {
               wind: data.list[i].speed,
               description: data.list[i].weather[0].description,
               pressure: data.list[i].pressure,
-              date: Date.today().add(i).days().toString("MMM d")
+              date: Date.today().add(i).days().toString("MMM d"),
+              icon: 'http://openweathermap.org/img/w/' + data.list[i].weather[0].icon + '.png'
 
             });
           }

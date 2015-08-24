@@ -7,7 +7,8 @@ define(function (require) {
 
 	return function () {
 		// Displays current weather
-		$("#zipSearch").click(function() {
+		$("#zipSearch").click(function(e) {
+			e.preventDefault();
 			var dayCount = 01;
 			var wxzip = $('#zipInput').val();
 
