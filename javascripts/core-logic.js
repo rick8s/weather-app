@@ -26,6 +26,27 @@ define(function (require) {
 			
 		});
 
+		$(document).keypress(function(e) {
+			if(e.which == 13) {
+				e.preventDefault();
+		//Calling getData module passing anonymous function
+			var wxzip = $('#zipInput').val();
+			// console.log(wxzip);
+			var dayCount = 01;
+
+			getData(wxzip, dayCount)
+			.then(function (weatherObj) {
+				// console.log(weatherObj);
+				var populateCurrentWeather = templates.currentWeatherTemplate(weatherObj);
+				$('#currentWeather').html(populateCurrentWeather);
+			})
+			.fail(function (error) {
+				console.log("Error:",  error);
+			})
+			.done();
+			}
+		});
+
 		$(document).on('click', '#selectThree', function () {
 			var dayCount = 03;
 			var wxzip = $('#zipInput').val();
