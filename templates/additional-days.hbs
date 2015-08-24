@@ -1,15 +1,27 @@
 {{#each this}}
 
-<div class="additionalDays">
-  <label><h1>Weather For {{date}}</h1></label>
-  <div>High: {{high}}</div>
-  <div>Low: {{low}}</div>
-  <div>Wind Speed: {{wind}}</div>
-  <div>Conditions: {{description}}</div>
-  <div>Air Pressure: {{pressure}}</div>
-  <div>
-    <button class='save'>Save</button> 
-  </div>
+
+<ul class="thumbnails">
+ <li class="span4">
+   <div class="thumbnail">
+     <div class="forecast">
+            <div class="additionalDays">
+                <div class="header">
+                  <label><h1>Weather For {{date}}</h1></label>
+                </div>
+              <div><em>High:</em> {{high}}</div>
+              <div><em>Low:</em> {{low}}</div>
+              <div><em>Wind Speed:</em> {{wind}}</div>
+              <div><em>Conditions:</em> {{description}}</div>
+              <div><em>Air Pressure:</em> {{pressure}}</div>
+            </div>
+            <div>
+              <button class='save'>Save</button> 
+            </div>
+        </div>
+    </div>
 </div>
+</li>
+</ul>
 
 {{/each}}

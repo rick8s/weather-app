@@ -1,35 +1,39 @@
 <!-- Begin facebook share init -->
-    <div id="fb-root"></div>
-      <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+  <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 
-    <!-- END Facebook-->
+  <!-- END Facebook-->
 
-<div class="forecast">
-  <label><h1>Current Weather</h1></label>
-  <div>City: {{city}}</div>
-  <div>Current Temp: {{currentTemp}}</div>
-  <div>Wind Speed: {{wind}}</div>
-  <div>Conditions: {{conditions}}</div>
-  <div>Air Pressure: {{pressure}}</div>
-  <div>Share current conditions: 
-<a href="https://twitter.com/share" class="twitter-share-button" data-text="Current conditions for {{city}}" data-via="MrWadeDotNet" data-hashtags="WXConditions">Tweet</a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-<div class="fb-share-button" data-href="http://localhost/" data-layout="button_count"></div>
 
-</div>
-
-  <div>
-    <button class='save'>Save</button> 
-  </div><br>
-  <div>
-    <button id='selectThree' class='forecast'>Three Day Forecast</button> 
-    <button id='selectSeven' class='forecast'>Seven Day Forecast</button> 
-  </div>
-</div>
-
+<ul class="thumbnails">
+ <li class="span4">
+   <div class="thumbnail">
+     <div class="forecast">
+       <div class="header">
+         <label><h1>Current Weather</h1></label>
+       </div>
+        <div>City: {{city}}</div>
+        <div>Current Temp: {{currentTemp}}</div>
+        <div>Wind Speed: {{wind}}</div>
+        <div>Conditions: {{conditions}}</div>
+        <div>Air Pressure: {{pressure}}</div>
+        <div>Share current conditions: 
+      <a href="https://twitter.com/share" class="twitter-share-button" data-text="Current conditions for {{city}}" data-via="MrWadeDotNet" data-hashtags="WXConditions">Tweet</a>
+      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+      <div class="fb-share-button" data-href="http://localhost/" data-layout="button_count"></div>
+       <div>
+        <button class='save btn btn-default'>Save</button> 
+      </div>
+       <div>
+         <button id='selectThree' class='forecast btn btn-default'>Three Day Forecast</button> 
+         <button id='selectSeven' class='forecast btn btn-default'>Seven Day Forecast</button> 
+       </div>
+     </div>
+   </li>
+ </ul>

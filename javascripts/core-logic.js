@@ -89,5 +89,19 @@ define(function (require) {
 
 		}); 
 
+		$(document).on('click', '.save', function () {
+	        var saveWeatherObj = {
+	            date: $(this).parent().siblings('label').children('h1').text(),
+	            high: $(this).parent().siblings('div:nth-of-type(1)').text(),
+	            low: $(this).parent().siblings('div:nth-of-type(2)').text(),
+	            wind: $(this).parent().siblings('div:nth-of-type(3)').text(),
+	            conditions: $(this).parent().siblings('div:nth-of-type(4)').text(),
+	            pressure: $(this).parent().siblings('div:nth-of-type(5)').text()
+
+	        }
+	        // console.log(saveWeatherObj);
+	    });
+
+
 	}; // End of return function
 });
