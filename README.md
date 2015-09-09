@@ -2,7 +2,7 @@
 
 ## About
 
-This application allows users to view weather for a given region by typing in a ZIP code. The page displays the current forecast and provides options for three- or seven-day forecasts for that area.
+This application allows users to view weather for a given region by typing in a ZIP code. The page displays the current forecast and provides options for three- or seven-day forecasts for that area. It was created as part of a group project with other Nashville Software School students.
 
 ## Changes and Notes
 
